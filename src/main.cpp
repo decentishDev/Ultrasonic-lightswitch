@@ -15,12 +15,12 @@ float currentG = 0;
 float currentB = 0;
 String currentGoal = "G";
 
-bool isLightOn = true;
+bool isLightOn = false;
 bool isHandInFront = false;
 
 int timeLeft = 0;
 
-float modifier = 20;
+float modifier = 0;
 float modifierDirection = 0;
 
 void setup(){
@@ -110,7 +110,7 @@ void loop(){
 
   if(isHandInFront && timeLeft==0){
     isLightOn = !isLightOn;
-    timeLeft = 200;
+    timeLeft = 100;
     
     if(isLightOn == true){
       modifierDirection = 1;
